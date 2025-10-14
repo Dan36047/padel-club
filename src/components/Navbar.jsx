@@ -1,6 +1,6 @@
 import { Box, Flex, Button, HStack, Image, Link } from '@chakra-ui/react';
 import logo from '../assets/logo.svg';
-const Hero = () => {
+const Navbar = () => {
     return (
         <Box bg="white" py={4} px={8} boxShadow="sm">
             <Flex maxW="container.xl" mx="auto" justify="space-between" align="center">
@@ -22,4 +22,4 @@ const Hero = () => {
     );
 }
 
-export default Hero;
+export default Navbar;
