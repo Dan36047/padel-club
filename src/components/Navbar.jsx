@@ -32,7 +32,7 @@ const Navbar = () => {
             </HStack>
             <Button
                 bg="green.400"
-                color="white"
+                color="black"
                 _hover={{ bg: "green.500", transform: 'scale(1.2)'}}
             >Купить абонемент</Button>
         </>
@@ -77,7 +77,7 @@ const Navbar = () => {
                                 <Button
                                     w="100%"
                                     bg="green.400"
-                                    color="white"
+                                    color="black"
                                     fontWeight="bold"
                                     fontSize="md"
                                     borderRadius="md"
