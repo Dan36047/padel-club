@@ -31,9 +31,9 @@ const Navbar = () => {
                 <Button variant="link" fontSize="lg" _hover={{transform: 'scale(1.2)'}}>Контакты</Button>
             </HStack>
             <Button
-                bg="#66BB6A"
+                bg="green.400"
                 color="white"
-                _hover={{ bg: "#4CAF50", transform: 'scale(1.2)'}}
+                _hover={{ bg: "green.500", transform: 'scale(1.2)'}}
             >Купить абонемент</Button>
         </>
     );
@@ -76,12 +76,12 @@ const Navbar = () => {
                             <Drawer.Footer p={4} pt={0}>
                                 <Button
                                     w="100%"
-                                    bg="#66BB6A"
+                                    bg="green.400"
                                     color="white"
                                     fontWeight="bold"
                                     fontSize="md"
                                     borderRadius="md"
-                                    _hover={{ bg: "#4CAF50"}}
+                                    _hover={{ bg: "green.500"}}
                                 >Купить абонемент</Button>
                             </Drawer.Footer>
                             <Drawer.CloseTrigger asChild>
