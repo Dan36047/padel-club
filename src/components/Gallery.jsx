@@ -1,4 +1,4 @@
-import {Box, Stack, Heading, IconButton, Image, Container} from "@chakra-ui/react";
+import {Box, VStack, Heading, IconButton, Image, Container} from "@chakra-ui/react";
 import {useRef} from "react";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {A11y, Navigation, Pagination, Scrollbar} from "swiper/modules";
@@ -22,7 +22,7 @@ const Gallery = () => {
     return (
         <Box pt="80px" pb="80px" mb="80px" bg="#f9fafb">
             <Container>
-                <Stack gap="30px" align="center">
+                <VStack gap="30px" align="center">
                     <Heading as="h1" fontWeight="bold" color="gray.800" fontSize={{base: '3xl', md: '5xl', lg: '6xl'}}>Галерея
                         клуба</Heading>
                     <Heading as="h2" fontSize={{base: "md", md: "xl"}} fontWeight={600} color="gray.600"
@@ -30,7 +30,7 @@ const Gallery = () => {
                              pt="30px">
                         Посмотрите на наши корты, атмосферу тренировок и счастливых игроков
                     </Heading>
-                </Stack>
+                </VStack>
 
                 <Box position="relative" width="100%" maxWidth="1200px" mx="auto" mt="60px" mb="8px">
                     <Swiper
