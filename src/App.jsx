@@ -4,6 +4,7 @@ import AboutGame from "./components/AboutGame.jsx";
 import Advantages from "./components/Advantages.jsx";
 import Gallery from "./components/Gallery.jsx";
 import Pricing from "./components/Pricing.jsx";
+import FAQ from "./components/FAQ.jsx";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
             <Advantages/>
             <Gallery/>
             <Pricing/>
+            <FAQ/>
 
         </>
     )
