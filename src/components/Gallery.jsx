@@ -20,7 +20,7 @@ const Gallery = () => {
     const swiperRef = useRef(null);
 
     return (
-        <Box pt="80px" pb="80px" mb="80px" bg="#f9fafb">
+        <Box pt="80px" pb="80px" bg="#f9fafb">
             <Container>
                 <VStack gap="30px" align="center">
                     <Heading as="h1" fontWeight="bold" color="gray.800" fontSize={{base: '3xl', md: '5xl', lg: '6xl'}}>Галерея

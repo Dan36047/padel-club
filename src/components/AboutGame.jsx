@@ -23,7 +23,7 @@ const AboutGame = () => {
     ];
     return (
         <>
-            <Box pt="90px" pb="80px" mb="80px" bg="#f9fafb" textAlign="center">
+            <Box pt="90px" pb="80px"  bg="#f9fafb" textAlign="center">
                 <Container>
                     <Heading
                         as="h2"

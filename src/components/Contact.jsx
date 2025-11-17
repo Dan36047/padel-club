@@ -20,7 +20,7 @@ import {
 
 const Contact = () => {
     return (
-        <Box bg="white" mb="80px" mt="80px" px={{ base: 4, md: 12 }} maxW="1200px" mx="auto">
+        <Box bg="white" pt="80px" pb="80px" maxW="1200px" mx="auto">
             <Container>
 
 

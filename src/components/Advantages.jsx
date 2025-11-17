@@ -95,7 +95,7 @@ const Advantages = () => {
     ];
 
     return (
-        <Box mb="80px">
+        <Box pt="80px" mb="80px">
             <Container>
 
                 <VStack spacing={4} mb="70px" align="center">

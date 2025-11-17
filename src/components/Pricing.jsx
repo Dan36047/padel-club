@@ -64,7 +64,7 @@ const plans = [
 
 export default function PricingSection() {
     return (
-        <Box mb="80px">
+        <Box mb="80px" pt="80px">
             <Container>
                 {/* Заголовок */}
                 <VStack spacing={3} textAlign="center" mb={10} gap="30px">

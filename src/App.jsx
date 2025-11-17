@@ -13,14 +13,14 @@ function App() {
 
     return (
         <>
-            <Navbar/>
-            <Hero/>
-            <AboutGame/>
-            <Advantages/>
-            <Gallery/>
-            <Pricing/>
-            <FAQ/>
-            <Contact />
+            <Navbar />
+            <section id="home"><Hero /></section>
+            <section id="about"><AboutGame /></section>
+            <section id="advantages"><Advantages /></section>
+            <section id="gallery"><Gallery /></section>
+            <section id="pricing"><Pricing /></section>
+            <section id="faq"><FAQ /></section>
+            <section id="contact"><Contact /></section>
             <Footer/>
 
         </>

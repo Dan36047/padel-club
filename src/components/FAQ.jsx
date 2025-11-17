@@ -60,7 +60,7 @@ const faqs = [
 
 export default function FAQ() {
     return (
-        <Box bg="gray.50" py={{base: 10, md: 20}} px={{base: 4, md: 8}}>
+        <Box bg="gray.50" pt="80px" pb="80px">
             <Container>
                 <VStack spacing={6} textAlign="center" mb={8}>
                     <Heading fontSize={{base: "2xl", md: "4xl"}} fontWeight="bold">

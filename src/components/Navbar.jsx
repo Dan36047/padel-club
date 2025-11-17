@@ -12,28 +12,47 @@ import {
     useBreakpointValue
 } from '@chakra-ui/react';
 import {useState} from "react"
-import { TfiAlignJustify } from "react-icons/tfi";
+import {TfiAlignJustify} from "react-icons/tfi";
 import logo from '../assets/logo.svg';
+
+
+
 
 const Navbar = () => {
     const isMobile = useBreakpointValue({base: true, md: true, lg: false});
     const [open, setOpen] = useState(false)
 
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({behavior: "smooth"});
+            setOpen(false); // чтобы Drawer закрывался на мобилке
+        }
+    };
+
     const DesktopNav = () => (
         <>
             <HStack spacing={6}>
-                <Button variant="link" fontSize="lg" _hover={{transform: 'scale(1.2)'}} >Главная</Button>
-                <Button variant="link" fontSize="lg" _hover={{transform: 'scale(1.2)'}}>Что такое падел</Button>
-                <Button variant="link" fontSize="lg" _hover={{transform: 'scale(1.2)'}}>Преимущества</Button>
-                <Button variant="link" fontSize="lg" _hover={{transform: 'scale(1.2)'}}>Галерея</Button>
-                <Button variant="link" fontSize="lg" _hover={{transform: 'scale(1.2)'}}>Цены</Button>
-                <Button variant="link" fontSize="lg" _hover={{transform: 'scale(1.2)'}}>FAQ</Button>
-                <Button variant="link" fontSize="lg" _hover={{transform: 'scale(1.2)'}}>Контакты</Button>
+                <Button variant="link" fontSize="lg" _hover={{transform: 'scale(1.2)'}}
+                        onClick={() => scrollToSection('home')}>Главная</Button>
+                <Button variant="link" fontSize="lg" _hover={{transform: 'scale(1.2)'}}
+                        onClick={() => scrollToSection('about')}>Что такое падел</Button>
+                <Button variant="link" fontSize="lg" _hover={{transform: 'scale(1.2)'}}
+                        onClick={() => scrollToSection('advantages')}>Преимущества</Button>
+                <Button variant="link" fontSize="lg" _hover={{transform: 'scale(1.2)'}}
+                        onClick={() => scrollToSection('gallery')}>Галерея</Button>
+                <Button variant="link" fontSize="lg" _hover={{transform: 'scale(1.2)'}}
+                        onClick={() => scrollToSection('pricing')}>Цены</Button>
+                <Button variant="link" fontSize="lg" _hover={{transform: 'scale(1.2)'}}
+                        onClick={() => scrollToSection('faq')}>FAQ</Button>
+                <Button variant="link" fontSize="lg" _hover={{transform: 'scale(1.2)'}}
+                        onClick={() => scrollToSection('contact')}>Контакты</Button>
             </HStack>
             <Button
                 bg="green.400"
                 color="black"
-                _hover={{ bg: "green.500", transform: 'scale(1.2)'}}
+                _hover={{bg: "green.500", transform: 'scale(1.2)'}}
+                onClick={() => scrollToSection('pricing')}
             >Купить абонемент</Button>
         </>
     );
@@ -42,7 +61,7 @@ const Navbar = () => {
         <>
             <Drawer.Root open={open} onOpenChange={(e) => setOpen(e.open)} placement="top">
                 <Drawer.Trigger asChild>
-                    <Button variant="outline" size="sm" >
+                    <Button variant="outline" size="sm">
                         <TfiAlignJustify color="white"/>
                     </Button>
                 </Drawer.Trigger>
@@ -64,12 +83,21 @@ const Navbar = () => {
                             </Drawer.Header>
                             <Drawer.Body p={4}>
                                 <Stack spacing={10} align="stretch">
-                                    <Button variant="link" fontSize="lg">Главная</Button>
-                                    <Button variant="link" fontSize="lg">Что такое падел</Button>
-                                    <Button variant="link" fontSize="lg">Преимущества</Button>
-                                    <Button variant="link" fontSize="lg">Цены</Button>
-                                    <Button variant="link" fontSize="lg">FAQ</Button>
-                                    <Button variant="link" fontSize="lg">Контакты</Button>
+                                    <Button variant="link" fontSize="lg"
+                                            onClick={() => scrollToSection('home')}>Главная</Button>
+                                    <Button variant="link" fontSize="lg" onClick={() => scrollToSection('about')}>Что
+                                        такое падел</Button>
+                                    <Button variant="link" fontSize="lg"
+                                            onClick={() => scrollToSection('advantages')}>Преимущества</Button>
+                                    <Button variant="link" fontSize="lg"
+                                            onClick={() => scrollToSection('gallery')}>Галерея</Button>
+                                    <Button variant="link" fontSize="lg"
+                                            onClick={() => scrollToSection('pricing')}>Цены</Button>
+                                    <Button variant="link" fontSize="lg"
+                                            onClick={() => scrollToSection('faq')}>FAQ</Button>
+                                    <Button variant="link" fontSize="lg"
+                                            onClick={() => scrollToSection('contact')}>Контакты</Button>
+
 
                                 </Stack>
                             </Drawer.Body>
@@ -81,7 +109,8 @@ const Navbar = () => {
                                     fontWeight="bold"
                                     fontSize="md"
                                     borderRadius="md"
-                                    _hover={{ bg: "green.500"}}
+                                    _hover={{bg: "green.500"}}
+                                    onClick={() => scrollToSection('pricing')}
                                 >Купить абонемент</Button>
                             </Drawer.Footer>
                             <Drawer.CloseTrigger asChild>
@@ -113,7 +142,7 @@ const Navbar = () => {
             right="0"
             zIndex="sticky"
         >
-            <Flex maxW="container.xl" mx="auto" justify="space-between" align="center" >
+            <Flex maxW="container.xl" mx="auto" justify="space-between" align="center">
 
                 {/* Логотип всегда виден */}
                 <Link href="/" _hover={{textDecoration: 'none'}}>
