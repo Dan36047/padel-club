@@ -5,6 +5,8 @@ import Advantages from "./components/Advantages.jsx";
 import Gallery from "./components/Gallery.jsx";
 import Pricing from "./components/Pricing.jsx";
 import FAQ from "./components/FAQ.jsx";
+import Contact from "./components/Contact.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
 
@@ -18,6 +20,8 @@ function App() {
             <Gallery/>
             <Pricing/>
             <FAQ/>
+            <Contact />
+            <Footer/>
 
         </>
     )

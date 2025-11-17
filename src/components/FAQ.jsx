@@ -58,7 +58,7 @@ const faqs = [
     },
 ];
 
-export default function FAQSection() {
+export default function FAQ() {
     return (
         <Box bg="gray.50" py={{base: 10, md: 20}} px={{base: 4, md: 8}}>
             <Container>
