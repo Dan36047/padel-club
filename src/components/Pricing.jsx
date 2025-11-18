@@ -33,7 +33,7 @@ const plans = [
             "-10% на аренду корта",
             "Персональный план развития",
         ],
-        buttonColor: "#D9FF3A",
+        buttonColor: "green.400",
         buttonTextColor: "black",
     },
     {
@@ -67,7 +67,7 @@ export default function PricingSection() {
         <Box mb="80px" pt="80px">
             <Container>
                 {/* Заголовок */}
-                <VStack spacing={3} textAlign="center" mb={10} gap="30px">
+                <VStack spacing={3} textAlign="center" mb={10} gap="40px">
                     <Heading as="h1" fontWeight="bold" color="gray.800" fontSize={{base: '3xl', md: '5xl', lg: '6xl'}}>
                         Цены и тарифы
                     </Heading>
@@ -90,7 +90,7 @@ export default function PricingSection() {
                             key={plan.title}
                             bg="white"
                             borderWidth={plan.best ? "2px" : "1px"}
-                            borderColor={plan.best ? "#D9FF3A" : "gray.200"}
+                            borderColor={plan.best ? "green.400" : "gray.200"}
                             borderRadius="2xl"
                             boxShadow="sm"
                             p={8}
@@ -114,7 +114,7 @@ export default function PricingSection() {
                                     top="-14px"
                                     left="50%"
                                     transform="translateX(-50%)"
-                                    bg="#D9FF3A"
+                                    bg="green.400"
                                     color="black"
                                     px={4}
                                     py={1}
@@ -140,7 +140,7 @@ export default function PricingSection() {
                                              minH={{base: 0, lg: "60px"}}>
                                         {plan.title}
                                     </Heading>
-                                    <Text fontSize="3xl" fontWeight="bold" color="#B6FF3A" mt={1}>
+                                    <Text fontSize="3xl" fontWeight="bold" color="green.400" mt={1}>
                                         {plan.price}
                                     </Text>
                                 </VStack>
@@ -159,7 +159,7 @@ export default function PricingSection() {
                                 >
                                     {plan.features.map((f) => (
                                         <HStack key={f} spacing={2}>
-                                            <Text color="#B6FF3A">✓</Text>
+                                            <Text color="green.600">✓</Text>
                                             <Text>{f}</Text>
                                         </HStack>
                                     ))}

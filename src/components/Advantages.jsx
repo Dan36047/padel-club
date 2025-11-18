@@ -98,12 +98,11 @@ const Advantages = () => {
         <Box pt="80px" mb="80px">
             <Container>
 
-                <VStack spacing={4} mb="70px" align="center">
+                <VStack spacing={4} mb="70px" align="center" gap="40px">
                     <Heading as="h1" fontWeight="bold" color="gray.800" fontSize={{base: '3xl', md: '5xl', lg: '6xl'}}>
                         Преимущества клуба
                     </Heading>
-                    <Text fontSize={{base: "md", md: "xl"}} fontWeight={600} color="gray.600" textAlign="center"
-                          pt="30px">
+                    <Text fontSize={{base: "md", md: "xl"}} fontWeight={600} color="gray.600" textAlign="center">
                         Почему выбирают Падел Хаб Москва
                     </Text>
                 </VStack>

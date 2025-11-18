@@ -37,7 +37,7 @@ const Footer = () => {
             >
                 {/* Левая колонка */}
                 <VStack align="flex-start" spacing={4} maxW="300px">
-                    <Text fontSize="lg" fontWeight="bold" color="#d6ff00">
+                    <Text fontSize="lg" fontWeight="bold" color="green.400">
                         Падел Хаб Москва
                     </Text>
                     <Text fontSize="sm" color="#dbe6f0">
@@ -83,9 +83,9 @@ const Footer = () => {
                         />
                         <IconButton
                             aria-label="Send"
-                            bg="#d6ff00"
+                            bg="green.400"
                             color="black"
-                            _hover={{bg: "#e6ff33"}}
+                            _hover={{bg: "green.200"}}
                         ><FaPaperPlane/></IconButton>
                     </HStack>
                 </VStack>

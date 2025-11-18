@@ -25,15 +25,16 @@ const Contact = () => {
 
 
             {/* Заголовок */}
-            <VStack spacing={3} textAlign="center" mb={10}>
+            <VStack spacing={3} textAlign="center" mb={10} gap="40px">
                 <Heading
-                    fontSize={{ base: "3xl", md: "4xl" }}
+                    as="h2"
+                    fontSize={{base: '3xl', md: '5xl', lg: '6xl'}}
                     fontWeight="bold"
-                    color="blue.900"
                 >
                     Контакты
                 </Heading>
-                <Text fontSize="lg" color="gray.600">
+                <Text fontSize={{base: "md", md: "xl"}} fontWeight={600} color="gray.600" maxW="800px"
+                      mx="auto">
                     Приезжай и попробуй падел прямо сегодня
                 </Text>
             </VStack>

@@ -1,4 +1,4 @@
-import {Box, Heading, Text, Flex, Icon, Container} from '@chakra-ui/react';
+import {Box, Heading, Text, Flex, Icon, Container, VStack} from '@chakra-ui/react';
 import {FaBolt, FaUsers, FaHeart} from 'react-icons/fa';
 
 
@@ -25,19 +25,22 @@ const AboutGame = () => {
         <>
             <Box pt="90px" pb="80px"  bg="#f9fafb" textAlign="center">
                 <Container>
-                    <Heading
-                        as="h2"
-                        fontSize={{base: '3xl', md: '5xl', lg: '6xl'}}
-                        fontWeight="bold"
-                    >
-                        Что такое падел?
-                    </Heading>
-                    <Text pt="40px" fontSize={{base: "md", md: "xl"}} fontWeight={600} color="gray.600" maxW="800px"
-                          mx="auto">
-                        Падел — динамичный вид спорта на корте 10×20 м со стеклянными стенами. Ракетки без струн, мяч
-                        похож на теннисный, формат чаще 2×2, счет как в теннисе. Розыгрыши часто от стен — легко начать,
-                        интересно и новичкам, и опытным.
-                    </Text>
+                    <VStack gap="40px">
+                        <Heading
+                            as="h2"
+                            fontSize={{base: '3xl', md: '5xl', lg: '6xl'}}
+                            fontWeight="bold"
+                        >
+                            Что такое падел?
+                        </Heading>
+                        <Text fontSize={{base: "md", md: "xl"}} fontWeight={600} color="gray.600" maxW="800px"
+                              mx="auto">
+                            Падел — динамичный вид спорта на корте 10×20 м со стеклянными стенами. Ракетки без струн, мяч
+                            похож на теннисный, формат чаще 2×2, счет как в теннисе. Розыгрыши часто от стен — легко начать,
+                            интересно и новичкам, и опытным.
+                        </Text>
+                    </VStack>
+
                     <Flex
                         direction={{base: "column", md: "row"}}
                         justify="center"
