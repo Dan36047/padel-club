@@ -10,6 +10,10 @@ import {
     Separator, Container,
 } from "@chakra-ui/react";
 
+import { useState } from "react";
+import OrderModal from "./ui/OrderModal.jsx";
+
+
 const plans = [
     {
         title: "Разовое занятие",
@@ -63,6 +67,9 @@ const plans = [
 ];
 
 export default function PricingSection() {
+    const [open, setOpen] = useState(false);
+    const [selectedPlan, setSelectedPlan] = useState("");
+
     return (
         <Box mb="80px" pt="80px">
             <Container>
@@ -172,16 +179,15 @@ export default function PricingSection() {
                                 bg={plan.buttonColor}
                                 color={plan.buttonTextColor}
                                 fontWeight="bold"
-                                _hover={{
-                                    opacity: 0.85,
-                                    transform: "scale(1.02)",
-                                }}
+                                _hover={{ opacity: 0.85, transform: "scale(1.02)" }}
                                 w="full"
                                 borderRadius="xl"
                                 py={5}
+                                onClick={() => { setSelectedPlan(plan.title); setOpen(true); }}
                             >
                                 Выбрать тариф
                             </Button>
+
                         </Box>
                     ))}
                 </Flex>
@@ -222,6 +228,7 @@ export default function PricingSection() {
                     </VStack>
                 </Box>
             </Container>
+            <OrderModal open={open} setOpen={setOpen} plan={selectedPlan} />
         </Box>
     );
 }

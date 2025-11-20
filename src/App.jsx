@@ -8,6 +8,8 @@ import FAQ from "./components/FAQ.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 
+import { Toaster } from "./components/ui/toaster.jsx";
+
 function App() {
 
 
@@ -22,6 +24,8 @@ function App() {
             <section id="faq"><FAQ /></section>
             <section id="contact"><Contact /></section>
             <Footer/>
+
+            <Toaster />
 
         </>
     )
