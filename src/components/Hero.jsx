@@ -10,6 +10,7 @@ import {
     Container,
 } from '@chakra-ui/react';
 import { ReactTyped } from "react-typed";
+import {useCallback} from "react";
 
 const HeroSection = () => {
     const adu = [
@@ -18,6 +19,13 @@ const HeroSection = () => {
         "Найди новых друзей",
         "Будь в форме с удовольствием",
     ];
+    const scrollToSection = useCallback((id) => {
+        const el = document.getElementById(id);
+
+        if (el) {
+            el.scrollIntoView({behavior: "smooth"});
+        }
+    }, []);
 
     return (
         <Box
@@ -96,6 +104,7 @@ const HeroSection = () => {
                                     transition="all 0.2s"
                                     borderRadius="md"
                                     width={{ base: "full", md: "auto" }}
+                                    onClick={() => scrollToSection("pricing")}
                                 >
                                     Записаться на пробную
                                 </Button>
@@ -111,6 +120,7 @@ const HeroSection = () => {
                                     transition="all 0.2s"
                                     borderRadius="md"
                                     width={{ base: "full", md: "auto" }}
+                                    onClick={() => scrollToSection("pricing")}
                                 >
                                     Посмотреть цены
                                 </Button>
