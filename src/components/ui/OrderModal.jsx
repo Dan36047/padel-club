@@ -7,18 +7,13 @@ import {
     Text,
     Checkbox,
 } from "@chakra-ui/react";
-import { useState } from "react";
-import { toaster } from "./toaster.jsx";
+import {useState} from "react";
+import {toaster} from "./toaster.jsx";
 
-export default function OrderModal({ open, setOpen, plan }) {
+export default function OrderModal({open, setOpen, plan}) {
     const [phoneError, setPhoneError] = useState("");
     const [policyError, setPolicyError] = useState("");
 
-    const validatePhone = (phone) => {
-        const cleaned = phone.replace(/[^\d+]/g, "");
-        const phoneRegex = /^(\+7|8)?\d{10}$/;
-        return phoneRegex.test(cleaned);
-    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -37,17 +32,10 @@ export default function OrderModal({ open, setOpen, plan }) {
             setPolicyError("");
         }
 
-        // телефон
-        if (!validatePhone(phone)) {
-            setPhoneError("Введите корректный номер телефона");
-            return;
-        } else {
-            setPhoneError("");
-        }
 
         const res = await fetch("/api/send", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
                 name,
                 phone,
@@ -75,7 +63,7 @@ export default function OrderModal({ open, setOpen, plan }) {
 
     return (
         <Dialog.Root open={open} onOpenChange={(details) => setOpen(details.open)}>
-            <Dialog.Backdrop />
+            <Dialog.Backdrop/>
             <Dialog.Positioner>
                 <Dialog.Content maxW="500px">
                     <Dialog.Header>
@@ -91,7 +79,7 @@ export default function OrderModal({ open, setOpen, plan }) {
                                 {/* Имя */}
                                 <Field.Root>
                                     <Field.Label>Имя</Field.Label>
-                                    <Input name="name" placeholder="Ваше имя" required />
+                                    <Input name="name" placeholder="Ваше имя" required/>
                                     <Field.ErrorText>Введите имя</Field.ErrorText>
                                 </Field.Root>
 
@@ -122,9 +110,9 @@ export default function OrderModal({ open, setOpen, plan }) {
                                 {/* Политика конфиденциальности */}
                                 <Field.Root invalid={!!policyError}>
                                     <Checkbox.Root name="policyAccepted">
-                                        <Checkbox.HiddenInput />
+                                        <Checkbox.HiddenInput/>
                                         <Checkbox.Control>
-                                            <Checkbox.Indicator />
+                                            <Checkbox.Indicator/>
                                         </Checkbox.Control>
                                         <Checkbox.Label>
                                             Согласен с{" "}
@@ -132,7 +120,7 @@ export default function OrderModal({ open, setOpen, plan }) {
                                                 href="/privacy-policy"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                style={{ textDecoration: "underline" }}
+                                                style={{textDecoration: "underline"}}
                                             >
                                                 политикой конфиденциальности
                                             </a>
@@ -151,7 +139,7 @@ export default function OrderModal({ open, setOpen, plan }) {
                     </Dialog.Body>
 
                     <Dialog.Footer>
-                        <Dialog.CloseTrigger />
+                        <Dialog.CloseTrigger/>
                     </Dialog.Footer>
                 </Dialog.Content>
             </Dialog.Positioner>
