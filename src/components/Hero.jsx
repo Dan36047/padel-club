@@ -74,6 +74,7 @@ const HeroSection = () => {
                                 fontWeight="bold"
                                 lineHeight="shorter"
                                 mb="28px"
+                                height="80px"
                             >
                                 <ReactTyped
                                     strings={adu}
