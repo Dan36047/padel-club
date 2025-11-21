@@ -29,7 +29,7 @@ const HeroSection = () => {
 
     return (
         <Box
-            bgImage="url('src/assets/bg.png')"
+            bgImage="url('/bg.png')"
             bgSize="cover"
             bgPosition="center"
             minH={{ base: "auto", md: "100vh" }}

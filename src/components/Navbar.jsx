@@ -13,7 +13,7 @@ import {
 } from '@chakra-ui/react';
 import {useState} from "react"
 import {TfiAlignJustify} from "react-icons/tfi";
-import logo from '../assets/logo.svg';
+import logo from '/logo.svg';
 
 
 

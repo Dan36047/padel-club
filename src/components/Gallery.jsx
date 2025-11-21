@@ -9,12 +9,12 @@ import 'swiper/css/pagination';
 
 const Gallery = () => {
     const images = [
-        'src/components/gallery/p1.jpg',
-        'src/components/gallery/p2.jpg',
-        'src/components/gallery/p3.jpg',
-        'src/components/gallery/p4.jpg',
-        'src/components/gallery/p5.jpg',
-        'src/components/gallery/p6.jpg',
+        '/gallery/p1.jpg',
+        '/gallery/p2.jpg',
+        '/gallery/p3.jpg',
+        '/gallery/p4.jpg',
+        '/gallery/p5.jpg',
+        '/gallery/p6.jpg',
     ];
 
     const swiperRef = useRef(null);
