@@ -9,12 +9,14 @@ import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 
 import { Toaster } from "./components/ui/toaster.jsx";
+import { Theme } from "@chakra-ui/react"
 
 function App() {
 
 
     return (
         <>
+            <Theme appearance="light">
             <Navbar />
             <section id="home"><Hero /></section>
             <section id="about"><AboutGame /></section>
@@ -26,6 +28,7 @@ function App() {
             <Footer/>
 
             <Toaster />
+            </Theme >
 
         </>
     )
