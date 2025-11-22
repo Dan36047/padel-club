@@ -1,16 +1,32 @@
-# React + Vite
+# 🎾 Padel Club Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🌟 Введение
 
-Currently, two official plugins are available:
+Кросс-платформенный и адаптивный лендинг-пейдж для **Падел-клуба** или спортивной школы. Проект создан с фокусом на демонстрацию тарифов, преимуществ и удобную запись на занятия через модальные окна.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Ссылка на демо-версию (Vercel):** https://padel-club-seven.vercel.app/
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Технологический стек
 
-## Expanding the ESLint configuration
+Проект разработан с использованием современного стека:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **React (v19):** Библиотека для построения пользовательских интерфейсов.
+* **Vite:** Высокоскоростной сборщик и инструмент для разработки.
+* **Chakra UI:** Мощная и гибкая компонентная библиотека для создания стильного и адаптивного дизайна.
+* **ESLint:** Для обеспечения чистоты и стандартизации кода.
+* **Swiper, react-icons, react-typed:** Дополнительные библиотеки для интерактивности и визуализации.
+
+---
+
+## 🛠️ Установка и локальный запуск
+
+Для запуска проекта на вашей локальной машине выполните следующие шаги.
+
+### 1. Клонирование репозитория
+
+```bash
+git clone [https://github.com/](https://github.com/)[ВАШ_НИКНЕЙМ]/padel-club.git
+cd padel-club
+
